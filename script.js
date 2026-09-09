@@ -13,3 +13,13 @@ function tampilkanNama(){
         </button>
     `;
 }
+
+function validasiForm(){
+    var tglMulai = document.getElementById('tgl_mulai').value;
+    var tglSelesai = document.getElementById('tgl_selesai').value;
+
+    if(new Date(tglSelesai) < new Date(tglMulai)){
+        alert('Tanggal Selesai Tidak Boleh Lebih Awal dari Tanggal Mulai!');
+    }
+    return true;
+}
